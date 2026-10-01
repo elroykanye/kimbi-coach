@@ -1,5 +1,20 @@
 # Install Kimbi Coach
 
+## Windows learner setup — recommended
+
+The Windows route does not use the `codex` command.
+
+1. Download the latest release ZIP from <https://github.com/elroykanye/kimbi-coach/releases/latest>.
+2. Right-click the downloaded ZIP and select **Extract All**. Do not run the installer from inside the compressed ZIP viewer.
+3. Open the extracted `kimbi-coach` folder and double-click `INSTALL-KIMBI-COACH-WINDOWS.cmd`.
+4. Read the result, then fully close and reopen the ChatGPT desktop app.
+5. Open Codex or Work, then open Plugins. Select the **Personal** source, open **Kimbi Coach**, and select **Install plugin**.
+6. Start a new chat and say: `Set up Kimbi Coach.`
+
+The installer copies the plugin to `%USERPROFILE%\.codex\plugins\kimbi-coach` and safely adds or replaces its entry in `%USERPROFILE%\.agents\plugins\marketplace.json`. Existing installations and marketplace files receive timestamped backups. It does not need administrator access, Node.js, Python, Git, or Codex CLI.
+
+Windows may warn about a downloaded, unsigned script. The source is included in the package at `scripts/install-windows.ps1` for review. If organizational policy blocks local scripts or local marketplaces, an administrator must allow them or Kimbi Coach must be installed after publication in the universal Plugins Directory.
+
 ## Ask an agent to install it
 
 In a ChatGPT desktop or Codex session that can operate the local computer, provide the repository link and say:
@@ -8,7 +23,7 @@ In a ChatGPT desktop or Codex session that can operate the local computer, provi
 
 The agent should report any unsupported surface or missing permission rather than claiming success.
 
-## Install from GitHub manually
+## Install from GitHub with Codex CLI — optional
 
 ```bash
 codex plugin marketplace add elroykanye/kimbi-coach
@@ -16,6 +31,8 @@ codex plugin add kimbi-coach@kimbi-coach
 ```
 
 Restart the ChatGPT desktop app or Codex client and begin a new chat. This installs Kimbi Coach at the local user level; it is not tied to a particular source-code repository.
+
+If PowerShell reports that `codex` is not recognized as a cmdlet, do not keep retrying the command. Use the Windows learner setup above. Installing Codex CLI separately is not required for Kimbi Coach.
 
 If it was previously installed, refresh it with:
 
@@ -28,11 +45,11 @@ Restart the client and open a completely new chat after refreshing. Installed ma
 
 ## Automatic updates
 
-Kimbi Coach bundles `hooks/hooks.json`, which runs `hooks/check_updates.py` at session start. The script refreshes the marketplace and reinstalls Kimbi Coach no more than once every 24 hours. Failed checks retry after six hours.
+Kimbi Coach bundles `hooks/hooks.json`. On Windows it runs a built-in PowerShell updater; on other local systems it runs `hooks/check_updates.py`. It checks GitHub Releases and refreshes Kimbi Coach no more than once every 24 hours. Failed checks retry after six hours.
 
 Codex does not trust plugin-bundled hooks automatically. Review and trust this hook once when the client prompts. If an update is installed, restart or open a new chat before expecting the new skill metadata to apply.
 
-The local updater is not available on ChatGPT web or mobile. Those installations depend on approved Plugins Directory releases. Where scheduled automations are supported, the setup skill can offer a daily update check as a fallback and must obtain approval before creating it.
+The Windows updater needs neither Codex CLI nor Python. The local updater is not available on ChatGPT web or mobile. Those installations depend on approved Plugins Directory releases. Where scheduled automations are supported, the setup skill can offer a daily update check as a fallback and must obtain approval before creating it.
 
 ## First-time setup
 
@@ -51,9 +68,9 @@ If onboarding does not launch automatically, ask:
 
 Google Drive access depends on the connected app and workspace policy. A OneDrive local path works only where that synchronized filesystem is mounted and authorized.
 
-## Install from the ZIP
+## Install from the ZIP on macOS or Linux
 
-The distributable ZIP contains one top-level `kimbi-coach` directory. Keep it intact. Add the containing marketplace or copy the plugin into an existing personal marketplace, then install it through the local Plugins Directory.
+The distributable ZIP contains one top-level `kimbi-coach` directory. Keep it intact. Add the containing marketplace or copy the plugin into an existing personal marketplace, then install it through the local Plugins Directory. The double-click installer is Windows-specific.
 
 ## Build a fresh ZIP
 

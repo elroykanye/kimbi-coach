@@ -7,7 +7,7 @@
           {
             "type": "command",
             "command": "python3 \"${PLUGIN_ROOT}/hooks/check_updates.py\"",
-            "commandWindows": "python \"%PLUGIN_ROOT%\\hooks\\check_updates.py\"",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"%PLUGIN_ROOT%\\hooks\\check_updates_windows.ps1\"",
             "timeout": 120,
             "statusMessage": "Checking Kimbi Coach updates"
           }

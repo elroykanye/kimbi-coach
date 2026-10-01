@@ -32,9 +32,24 @@ It must not respond only with “What do you want me to do?” If a file cannot 
 
 Skill activation is metadata-driven. This release explicitly targets attachment-only turns, but a skills-only plugin cannot provide a guaranteed file-open event on every ChatGPT surface. A future MCP file-viewer extension is the route to a hard file-event integration.
 
+## Easiest Windows installation — no `codex` command required
+
+For a learner using the ChatGPT desktop app on Windows:
+
+1. Download the latest ZIP from [GitHub Releases](https://github.com/elroykanye/kimbi-coach/releases/latest).
+2. Right-click the ZIP, select **Extract All**, and open the extracted `kimbi-coach` folder.
+3. Double-click **`INSTALL-KIMBI-COACH-WINDOWS.cmd`**.
+4. Fully close and reopen the ChatGPT desktop app.
+5. Open **Codex** or **Work**, then **Plugins**. Choose the **Personal** source, open **Kimbi Coach**, and select **Install plugin**.
+6. Start a new chat and send: `Set up Kimbi Coach.`
+
+The installer needs no administrator account, Node.js, Python, Git, or Codex CLI. It installs files only for the current Windows user. Windows may show a security warning because the downloaded script is not code-signed; its source is included in this repository for review.
+
+If she uses only `chatgpt.com` or the mobile app, this GitHub build cannot be installed there directly. Account-wide installation on supported ChatGPT and Codex surfaces requires approval and publication in OpenAI's universal Plugins Directory.
+
 ### Already installed an earlier version?
 
-The installed plugin is cached, so updating the GitHub repository alone is not enough. Run:
+The installed plugin is cached, so updating the GitHub repository alone is not enough. Windows users can download the latest ZIP and run `INSTALL-KIMBI-COACH-WINDOWS.cmd` again. Developers with Codex CLI can run:
 
 ```bash
 codex plugin marketplace upgrade kimbi-coach
@@ -47,14 +62,14 @@ Then restart the client and test in a completely new chat. The attachment-only f
 
 Local Codex and ChatGPT desktop installations include a bundled `SessionStart` hook. After the learner reviews and trusts it once, the hook:
 
-- checks the `kimbi-coach` marketplace at most once every 24 hours;
-- refreshes the marketplace and reinstalls the latest Kimbi Coach package;
+- checks for a Kimbi Coach release at most once every 24 hours;
+- refreshes and reinstalls the latest Kimbi Coach package;
 - stores only update timestamps and compact command results in the plugin's writable data directory;
 - retries a failed check after six hours without blocking study features.
 
 An update found at session start applies to a **new chat** and may require restarting the client. The hook does not run on ChatGPT web or mobile because web installation does not deploy local scripts. Those surfaces receive updates through the Plugins Directory after a new package version is reviewed and published.
 
-Bundled hooks are intentionally not trusted automatically by Codex. During setup, review and trust `hooks/hooks.json` and `hooks/check_updates.py` if automatic local updates are desired. If hooks are unavailable but scheduled automations are supported, Kimbi Coach offers to configure a daily update check after receiving permission.
+On Windows, the updater uses built-in PowerShell and does not require the `codex` command or Python. On other local systems it uses Codex CLI. Bundled hooks are intentionally not trusted automatically by Codex. During setup, review and trust `hooks/hooks.json` and the platform updater script if automatic local updates are desired. If hooks are unavailable but scheduled automations are supported, Kimbi Coach offers to configure a daily update check after receiving permission.
 
 ## Give this link to ChatGPT or Codex
 
@@ -68,18 +83,18 @@ In ChatGPT desktop or Codex with access to the local computer, send this prompt:
 
 If that environment cannot install GitHub marketplace plugins, it should explain the limitation rather than pretending the installation succeeded. Use the manual steps below.
 
-## Manual installation
+## Command-line installation (optional)
 
 ### 1. Add the marketplace and plugin
 
-Run these commands on each computer that uses a supported local Codex or ChatGPT desktop client:
+Developers who already have Codex CLI may run these commands on each computer:
 
 ```bash
 codex plugin marketplace add elroykanye/kimbi-coach
 codex plugin add kimbi-coach@kimbi-coach
 ```
 
-This is a user-level local installation. It is not limited to one source-code project.
+This is a user-level local installation. It is not limited to one source-code project. If PowerShell says `codex` is not recognized, use the Windows ZIP installer above instead.
 
 ### 2. Restart and open a new chat
 
@@ -174,7 +189,7 @@ Restart the client and use a new chat after updating.
 
 ## Download the ZIP
 
-Download the latest tested archive from [GitHub Releases](https://github.com/elroykanye/kimbi-coach/releases/latest). The ZIP contains a single top-level `kimbi-coach` plugin directory.
+Download the latest tested archive from [GitHub Releases](https://github.com/elroykanye/kimbi-coach/releases/latest). The ZIP contains a single top-level `kimbi-coach` plugin directory, including the Windows installer.
 
 ## Repository layout
 

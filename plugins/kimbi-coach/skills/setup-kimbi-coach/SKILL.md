@@ -42,6 +42,6 @@ If a profile already exists, read it, confirm it belongs to the learner, preserv
 
 ## Enable updates
 
-Explain that local Codex installations include a SessionStart hook that checks the `kimbi-coach` marketplace at most once per 24 hours. The learner must review and trust the bundled hook once; do not claim it is active until the host shows it as trusted. A newly installed version becomes available in a new chat and may require restarting the client.
+Explain that local installations include a SessionStart hook that checks for Kimbi Coach updates at most once per 24 hours. On Windows it uses built-in PowerShell and does not require Codex CLI or Python; on other local systems it uses Codex CLI. The learner must review and trust the bundled hook once; do not claim it is active until the host shows it as trusted. A newly installed version becomes available in a new chat and may require restarting the client.
 
 If hooks are unavailable but the environment supports scheduled automations, offer to create a daily Kimbi Coach update check. Obtain confirmation before creating the automation in the learner's account. Web and mobile installations rely on published Plugins Directory updates rather than the local hook.

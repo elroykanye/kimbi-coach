@@ -35,7 +35,7 @@ Kimbi Coach has no server and no account connection of its own. It writes study 
 
 ## Updates
 
-Supported local clients can run the bundled, rate-limited SessionStart updater after the learner reviews and trusts its hook. It checks no more than daily and loads installed changes in a new chat. Web and mobile clients rely on published Plugins Directory releases.
+Supported local clients can run the bundled, rate-limited SessionStart updater after the learner reviews and trusts its hook. It checks no more than daily and loads installed changes in a new chat. The Windows updater uses built-in PowerShell and does not require Codex CLI or Python. Web and mobile clients rely on published Plugins Directory releases.
 
 ## Development
 
