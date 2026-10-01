@@ -24,6 +24,8 @@ codex plugin marketplace upgrade kimbi-coach
 codex plugin add kimbi-coach@kimbi-coach
 ```
 
+Restart the client and open a completely new chat after refreshing. Installed marketplace plugins are cached; an existing chat may continue using the earlier skill metadata.
+
 ## First-time setup
 
 The manifest declares `setup-kimbi-coach` as its onboarding skill. It asks the learner to select one of these destinations:

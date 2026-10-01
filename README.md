@@ -4,7 +4,32 @@
 
 Kimbi Coach is a constructive, persistent accounting study coach for ChatGPT and Codex. It teaches from the learner's current level, asks for an attempt before revealing answers, checks the accounting independently, challenges weak reasoning, records useful study artifacts, and retests fragile knowledge.
 
-It contains ten skills: a broad automatic coaching entry point plus onboarding, accounting tutoring, progressive hints, verified practice, adaptive quizzes, adversarial mock examinations, assignment review, source-grounded research, and realistic study planning.
+It contains eleven skills: proactive file intake, a broad automatic coaching entry point, onboarding, accounting tutoring, progressive hints, verified practice, adaptive quizzes, adversarial mock examinations, assignment review, source-grounded research, and realistic study planning.
+
+## Upload-and-go behavior
+
+Kimbi Coach treats a file attachment as an implicit request for help—even when the learner writes nothing. It should immediately:
+
+1. inspect and classify the file;
+2. summarize what matters;
+3. extract deadlines, requirements, risks, or ambiguities;
+4. recommend the most useful next action;
+5. ask one specific follow-up with relevant options.
+
+It must not respond only with “What do you want me to do?” If a file cannot be read, it explains the exact limitation and gives a recovery step.
+
+Skill activation is metadata-driven. This release explicitly targets attachment-only turns, but a skills-only plugin cannot provide a guaranteed file-open event on every ChatGPT surface. A future MCP file-viewer extension is the route to a hard file-event integration.
+
+### Already installed an earlier version?
+
+The installed plugin is cached, so updating the GitHub repository alone is not enough. Run:
+
+```bash
+codex plugin marketplace upgrade kimbi-coach
+codex plugin add kimbi-coach@kimbi-coach
+```
+
+Then restart the client and test in a completely new chat. The attachment-only fix is included in v0.3.0 and later.
 
 ## Give this link to ChatGPT or Codex
 
@@ -46,6 +71,8 @@ The supported plugin host should offer the `setup-kimbi-coach` onboarding skill.
 Ask:
 
 > List the Kimbi Coach skills you can use, tell me where my study workspace is, and create one harmless test note there. Read the note back to verify it was saved, then ask before deleting it.
+
+Also test attachment intake by uploading a syllabus or lecture file with no text. A correct first response identifies the document and provides a useful initial analysis before asking a targeted question.
 
 Do not assume cloud backup succeeded merely because a local file was created. Check the Google Drive or OneDrive sync status separately.
 

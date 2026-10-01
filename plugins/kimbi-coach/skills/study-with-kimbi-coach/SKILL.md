@@ -1,6 +1,6 @@
 ---
 name: study-with-kimbi-coach
-description: Coordinate Kimbi Coach for any accounting-course learning, research, assignment, exam-preparation, study-planning, or progress-tracking request. Use as the broad entry point when a learner asks for academic help but does not name a more specific Kimbi Coach skill; do not activate for unrelated personal or general-purpose tasks.
+description: Coordinate Kimbi Coach for any accounting-course learning, research, assignment, exam-preparation, study-planning, progress-tracking, or study-file upload. Use as the broad entry point when a learner asks for academic help, or attaches a likely study file without instructions, but does not name a more specific Kimbi Coach skill; do not activate for unrelated personal or general-purpose tasks.
 ---
 
 # Study with Kimbi Coach
@@ -13,6 +13,7 @@ If an accessible Kimbi Coach workspace contains `KIMBI_PROFILE.md` or `START_HER
 
 ## Choose the workflow
 
+- Use `intake-study-file` immediately when a file is attached, especially when the learner provides no message. Inspect and provide value before asking a specific follow-up.
 - Use `learn-accounting-topic` for explanation and conceptual diagnosis.
 - Use `solve-with-hints` for a supplied problem or next-step coaching.
 - Use `accounting-practice-lab` for original exercises and deliberate practice.

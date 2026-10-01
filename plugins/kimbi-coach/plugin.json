@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kimbi-coach",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A persistent accounting study coach that teaches, tests, challenges, and retests for durable understanding.",
   "author": {
     "name": "Kimbi Coach",
@@ -21,6 +21,7 @@
         "category": "Education",
         "capabilities": [
           "Accounting tutoring",
+          "Proactive file intake",
           "Guided problem solving",
           "Practice generation",
           "Adaptive quizzing",
@@ -30,9 +31,9 @@
           "Study planning"
         ],
         "defaultPrompt": [
+          "Inspect my uploaded study file and recommend the best next step.",
           "Teach me this accounting topic, then test me.",
-          "Review my solution without giving away the answer first.",
-          "Run a strict mock oral exam on this material."
+          "Review my solution without giving away the answer first."
         ],
         "brandColor": "#5B3FD1"
       }

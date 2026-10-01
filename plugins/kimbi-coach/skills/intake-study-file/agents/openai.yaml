@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intake a Study File"
+  short_description: "Proactively inspect files without a prompt"
+  default_prompt: "Use $intake-study-file to inspect this upload and recommend the best next step."
