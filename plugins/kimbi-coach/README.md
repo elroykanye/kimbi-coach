@@ -2,10 +2,12 @@
 
 **Learn it. Defend it. Master it.**
 
-Kimbi Coach is a skills-only plugin for ChatGPT and Codex. It is a supportive but persistent accounting study partner: it teaches, asks for an attempt, challenges the reasoning, checks the accounting, and retests weak areas.
+Kimbi Coach is a skills-only plugin for ChatGPT and Codex. It is a supportive but persistent accounting study partner: it configures a safe study home, teaches, asks for an attempt, challenges the reasoning, checks the accounting, and retests weak areas.
 
 ## Included skills
 
+- `study-with-kimbi-coach` — broad entry point for accounting-course requests
+- `setup-kimbi-coach` — first-run preferences and backed-up workspace selection
 - `learn-accounting-topic` — diagnostic, first-principles tutoring
 - `solve-with-hints` — progressive hints without premature answer disclosure
 - `accounting-practice-lab` — original accounting exercises with independent checks
@@ -25,7 +27,7 @@ Kimbi Coach is a skills-only plugin for ChatGPT and Codex. It is a supportive bu
 
 ## Privacy
 
-Kimbi Coach has no server and no account connection of its own. The plugin does not independently store progress. Avoid including student numbers, passwords, private school records, or confidential client data in prompts or source files.
+Kimbi Coach has no server and no account connection of its own. It writes study artifacts only through a workspace or connected app the learner selects and authorizes. Avoid including student numbers, passwords, private school records, or confidential client data in prompts, profile files, or source files.
 
 ## Development
 

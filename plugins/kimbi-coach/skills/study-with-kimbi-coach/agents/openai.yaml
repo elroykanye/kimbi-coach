@@ -1,0 +1,4 @@
+interface:
+  display_name: "Study With Kimbi Coach"
+  short_description: "Your front door to every coaching workflow"
+  default_prompt: "Use $study-with-kimbi-coach to help me with this accounting-course task."

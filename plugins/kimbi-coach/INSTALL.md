@@ -1,19 +1,49 @@
 # Install Kimbi Coach
 
-## From GitHub
+## Ask an agent to install it
 
-Add the repository as a marketplace, then install Kimbi Coach:
+In a ChatGPT desktop or Codex session that can operate the local computer, provide the repository link and say:
+
+> Install Kimbi Coach from https://github.com/elroykanye/kimbi-coach as a user-level plugin. Verify it, start a new chat if required, and run its setup workflow so I can choose a backed-up study workspace.
+
+The agent should report any unsupported surface or missing permission rather than claiming success.
+
+## Install from GitHub manually
 
 ```bash
 codex plugin marketplace add elroykanye/kimbi-coach
 codex plugin add kimbi-coach@kimbi-coach
 ```
 
-Restart the ChatGPT desktop app after installing, then begin a new chat so the skills are loaded cleanly.
+Restart the ChatGPT desktop app or Codex client and begin a new chat. This installs Kimbi Coach at the local user level; it is not tied to a particular source-code repository.
 
-## From the ZIP
+If it was previously installed, refresh it with:
 
-The distributable ZIP contains one top-level `kimbi-coach` directory. Keep that directory intact when extracting it. Add the containing directory as a local marketplace or copy the plugin into an existing local marketplace before installing it.
+```bash
+codex plugin marketplace upgrade kimbi-coach
+codex plugin add kimbi-coach@kimbi-coach
+```
+
+## First-time setup
+
+The manifest declares `setup-kimbi-coach` as its onboarding skill. It asks the learner to select one of these destinations:
+
+- a connected Google Drive folder;
+- a local folder already synchronized by OneDrive;
+- a ChatGPT Space or Project;
+- another explicitly backed-up local folder.
+
+The skill displays the intended files and asks for confirmation before writing. It then reads created files back to verify access. It never requests credentials or stores secrets.
+
+If onboarding does not launch automatically, ask:
+
+> Use `setup-kimbi-coach` to configure my study workspace.
+
+Google Drive access depends on the connected app and workspace policy. A OneDrive local path works only where that synchronized filesystem is mounted and authorized.
+
+## Install from the ZIP
+
+The distributable ZIP contains one top-level `kimbi-coach` directory. Keep it intact. Add the containing marketplace or copy the plugin into an existing personal marketplace, then install it through the local Plugins Directory.
 
 ## Build a fresh ZIP
 
@@ -25,6 +55,8 @@ From the repository root:
 
 The archive is written to `dist/kimbi-coach-<version>.zip`.
 
-## Public plugin directory
+## Cross-device and web availability
 
-A public GitHub repository does not automatically create a public ChatGPT plugin listing. Directory publication is a separate process: upload the ZIP through the OpenAI plugin submission portal, complete the automated checks and policy attestations, submit it for review, and publish it after approval.
+A GitHub marketplace installation affects supported local clients on the computer where it was installed. It does not by itself enable the plugin on ChatGPT web, mobile, or another computer.
+
+For universal directory installation across supported ChatGPT and Codex surfaces, upload the plugin ZIP through the OpenAI plugin submission portal, resolve automated findings, submit it for review, and publish the approved version. Organization and school workspace policies can still restrict availability.

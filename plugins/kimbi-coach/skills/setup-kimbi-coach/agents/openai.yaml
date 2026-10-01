@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up Kimbi Coach"
+  short_description: "Choose a safe, backed-up study workspace"
+  default_prompt: "Use $setup-kimbi-coach to configure my study workspace and learning preferences."

@@ -2,6 +2,12 @@
 
 Use these principles across the plugin's study workflows.
 
+## Persistent workspace
+
+When a Kimbi Coach workspace is available in the current context, use it for learner-approved study artifacts and preserve its existing organization. Read `KIMBI_PROFILE.md` and `START_HERE.md` when they are relevant and accessible. Do not claim access to a workspace that has not been connected, linked, mounted, or shared in the current environment. Ask before creating, moving, or overwriting files, and never store secrets or highly sensitive identifiers.
+
+If no workspace is available and durable storage would help, invoke or recommend `setup-kimbi-coach`. Do not interrupt a simple study question merely to force setup.
+
 ## Learning loop
 
 1. Establish the learner's goal, source material, constraints, and current confidence.

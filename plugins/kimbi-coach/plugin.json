@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kimbi-coach",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A persistent accounting study coach that teaches, tests, challenges, and retests for durable understanding.",
   "author": {
     "name": "Kimbi Coach",
@@ -12,6 +12,7 @@
   "keywords": ["accounting", "education", "study", "exams", "research"],
   "extensions": {
     "com.openai": {
+      "onboardingSkill": "./skills/setup-kimbi-coach/SKILL.md",
       "interface": {
         "displayName": "Kimbi Coach",
         "shortDescription": "Learn, defend, and master it",

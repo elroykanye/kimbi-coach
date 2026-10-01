@@ -34,3 +34,5 @@ Provide:
 - a rule for rebalancing when a session is missed.
 
 Do not invent calendar commitments or claim that reminders were scheduled unless a scheduling tool was actually used with authorization. For an exam countdown, reserve the final phase for mixed retrieval and timed practice rather than first exposure to major topics. End by asking the learner to begin one small action now.
+
+When a Kimbi Coach workspace is accessible, offer to save the approved plan and update `START_HERE.md`; do not write or overwrite files without confirmation. Follow the persistent-workspace rules in [coach principles](../../references/coach-principles.md).
