@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversarial Examiner"
+  short_description: "Strict mock exams and oral defenses"
+  default_prompt: "Use $adversarial-examiner to run a strict mock exam on this material."

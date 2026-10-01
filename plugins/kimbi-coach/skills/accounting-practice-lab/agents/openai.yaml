@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accounting Practice Lab"
+  short_description: "Original exercises with verified solutions"
+  default_prompt: "Use $accounting-practice-lab to create a practice set for this topic."

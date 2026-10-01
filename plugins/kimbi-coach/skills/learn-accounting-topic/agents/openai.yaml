@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learn an Accounting Topic"
+  short_description: "Understand accounting through active practice"
+  default_prompt: "Use $learn-accounting-topic to teach this topic and test my understanding."

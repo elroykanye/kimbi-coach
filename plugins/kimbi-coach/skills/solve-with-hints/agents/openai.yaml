@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solve With Hints"
+  short_description: "Progressive hints without spoiling the solution"
+  default_prompt: "Use $solve-with-hints to guide me through this problem one hint at a time."

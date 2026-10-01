@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research With Sources"
+  short_description: "Authoritative evidence and citation checks"
+  default_prompt: "Use $research-with-sources to research this question with traceable evidence."

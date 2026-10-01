@@ -1,0 +1,20 @@
+{
+  "name": "kimbi-coach",
+  "interface": {
+    "displayName": "Kimbi Coach"
+  },
+  "plugins": [
+    {
+      "name": "kimbi-coach",
+      "source": {
+        "source": "local",
+        "path": "./plugins/kimbi-coach"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

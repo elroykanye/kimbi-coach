@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quiz and Retest"
+  short_description: "Adaptive recall with targeted second attempts"
+  default_prompt: "Use $quiz-and-retest to test me on this material one question at a time."

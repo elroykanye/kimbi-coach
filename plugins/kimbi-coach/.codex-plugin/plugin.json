@@ -1,0 +1,36 @@
+{
+  "name": "kimbi-coach",
+  "version": "0.1.0",
+  "description": "A persistent accounting study coach that teaches, tests, challenges, and retests for durable understanding.",
+  "author": {
+    "name": "Kimbi Coach",
+    "url": "https://github.com/elroykanye/kimbi-coach"
+  },
+  "homepage": "https://github.com/elroykanye/kimbi-coach",
+  "repository": "https://github.com/elroykanye/kimbi-coach",
+  "keywords": ["accounting", "education", "study", "exams", "research"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Kimbi Coach",
+    "shortDescription": "Learn, defend, and master it",
+    "longDescription": "Kimbi Coach is a constructive, persistent study partner for accounting students. It diagnoses gaps, teaches with questions and hints, generates accounting practice, runs adaptive quizzes and mock examinations, challenges weak reasoning, reviews work against rubrics, supports source-grounded research, and builds realistic study plans. It is designed to develop independent understanding rather than complete restricted assessments for the student.",
+    "developerName": "Kimbi Coach",
+    "category": "Education",
+    "capabilities": [
+      "Accounting tutoring",
+      "Guided problem solving",
+      "Practice generation",
+      "Adaptive quizzing",
+      "Adversarial examination",
+      "Assignment review",
+      "Source-grounded research",
+      "Study planning"
+    ],
+    "defaultPrompt": [
+      "Teach me this accounting topic, then test me.",
+      "Review my solution without giving away the answer first.",
+      "Run a strict mock oral exam on this material."
+    ],
+    "brandColor": "#5B3FD1"
+  }
+}

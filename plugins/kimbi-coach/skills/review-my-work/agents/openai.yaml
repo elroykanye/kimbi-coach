@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review My Work"
+  short_description: "Find important errors before submission"
+  default_prompt: "Use $review-my-work to critique this work against the instructions and rubric."

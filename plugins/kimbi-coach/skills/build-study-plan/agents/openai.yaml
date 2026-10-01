@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Study Plan"
+  short_description: "Realistic planning driven by mastery evidence"
+  default_prompt: "Use $build-study-plan to turn this syllabus and schedule into a study plan."
