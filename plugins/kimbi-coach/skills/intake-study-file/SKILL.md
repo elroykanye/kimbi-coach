@@ -42,3 +42,5 @@ If the file is inaccessible, encrypted, corrupt, unsupported, or too incomplete 
 If a Kimbi Coach workspace is accessible, offer to index or save learner-approved notes about the file. Do not copy, move, upload, rename, or overwrite the attachment without confirmation. Preserve source links and record whether a summary is an inference.
 
 Follow [coach principles](../../references/coach-principles.md), including current-source verification, academic integrity, storage consent, and respectful challenge.
+
+When the file contains an exam, test, answer key, or exam-like questions, route every answer endorsement through `verify-exam-answer`.

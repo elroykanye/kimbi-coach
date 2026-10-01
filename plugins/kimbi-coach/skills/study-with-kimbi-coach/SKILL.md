@@ -1,6 +1,6 @@
 ---
 name: study-with-kimbi-coach
-description: Coordinate Kimbi Coach for any accounting-course learning, research, assignment, exam-preparation, study-planning, progress-tracking, or study-file upload. Use as the broad entry point when a learner asks for academic help, or attaches a likely study file without instructions, but does not name a more specific Kimbi Coach skill; do not activate for unrelated personal or general-purpose tasks.
+description: Coordinate Kimbi Coach for any accounting-course learning, research, assignment, exam-preparation, study-planning, career-planning, progress-tracking, context-poor input, or study-file upload. Use as the broad entry point when the learner needs academic or accounting-career help but does not name a more specific skill; do not activate for unrelated personal or general-purpose tasks.
 ---
 
 # Study with Kimbi Coach
@@ -13,15 +13,18 @@ If an accessible Kimbi Coach workspace contains `KIMBI_PROFILE.md` or `START_HER
 
 ## Choose the workflow
 
+- Use `proactive-study-copilot` when the learner supplies little or no instruction. Infer and provide a useful first step before asking one targeted question.
 - Use `intake-study-file` immediately when a file is attached, especially when the learner provides no message. Inspect and provide value before asking a specific follow-up.
 - Use `learn-accounting-topic` for explanation and conceptual diagnosis.
 - Use `solve-with-hints` for a supplied problem or next-step coaching.
 - Use `accounting-practice-lab` for original exercises and deliberate practice.
 - Use `quiz-and-retest` for retrieval practice and mastery checks.
 - Use `adversarial-examiner` for mock exams and oral defense.
+- Use `verify-exam-answer` before trusting or endorsing any exam-like answer or answer key.
 - Use `review-my-work` for critique against instructions or a rubric.
 - Use `research-with-sources` for research and current authoritative evidence.
 - Use `build-study-plan` for scheduling, prioritization, and catch-up plans.
+- Use `plan-accounting-career` for career paths, skills, credentials, internships, applications, and professional development.
 
 When several apply, combine only the smallest useful sequence. For example, diagnose briefly, teach the missing idea, then retest it. Do not overwhelm the learner with every possible mode.
 

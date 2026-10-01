@@ -26,6 +26,14 @@ codex plugin add kimbi-coach@kimbi-coach
 
 Restart the client and open a completely new chat after refreshing. Installed marketplace plugins are cached; an existing chat may continue using the earlier skill metadata.
 
+## Automatic updates
+
+Kimbi Coach bundles `hooks/hooks.json`, which runs `hooks/check_updates.py` at session start. The script refreshes the marketplace and reinstalls Kimbi Coach no more than once every 24 hours. Failed checks retry after six hours.
+
+Codex does not trust plugin-bundled hooks automatically. Review and trust this hook once when the client prompts. If an update is installed, restart or open a new chat before expecting the new skill metadata to apply.
+
+The local updater is not available on ChatGPT web or mobile. Those installations depend on approved Plugins Directory releases. Where scheduled automations are supported, the setup skill can offer a daily update check as a fallback and must obtain approval before creating it.
+
 ## First-time setup
 
 The manifest declares `setup-kimbi-coach` as its onboarding skill. It asks the learner to select one of these destinations:

@@ -34,3 +34,5 @@ Return:
 - one focused remediation exercise.
 
 Validate all accounting solutions and follow the academic-integrity boundary in [coach principles](../../references/coach-principles.md). If the user appears to be in a live restricted exam, switch to general concept support or an analogous practice question.
+
+Before releasing a model answer, marking an answer correct, or saying the result can be trusted, apply `verify-exam-answer`. Show the source basis, independent check, material limitations, and confidence label. An answer that is internally plausible but lacks required current-source verification must not be labelled verified.

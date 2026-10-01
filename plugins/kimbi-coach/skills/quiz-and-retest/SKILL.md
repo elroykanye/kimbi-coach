@@ -32,3 +32,5 @@ After each response, record correctness, confidence if provided, error type, and
 - the two highest-value review actions.
 
 Retest missed or fragile ideas with new surface details and the same underlying reasoning. Space the suggested retest interval according to performance: soon for missing knowledge, later for correct and well-explained answers. Follow the integrity and tone principles in [coach principles](../../references/coach-principles.md).
+
+Verify the answer key before administering the quiz. For any exam-like answer the learner may rely on, apply `verify-exam-answer` before declaring it correct or trustworthy.

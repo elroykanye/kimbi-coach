@@ -4,7 +4,19 @@
 
 Kimbi Coach is a constructive, persistent accounting study coach for ChatGPT and Codex. It teaches from the learner's current level, asks for an attempt before revealing answers, checks the accounting independently, challenges weak reasoning, records useful study artifacts, and retests fragile knowledge.
 
-It contains eleven skills: proactive file intake, a broad automatic coaching entry point, onboarding, accounting tutoring, progressive hints, verified practice, adaptive quizzes, adversarial mock examinations, assignment review, source-grounded research, and realistic study planning.
+It contains fourteen skills: context-aware proactive help, file intake, a broad coaching entry point, onboarding, accounting tutoring, progressive hints, verified practice, adaptive quizzes, adversarial mock examinations, exam-answer verification, assignment review, source-grounded research, study planning, and accounting career planning.
+
+## Proactive by default
+
+Kimbi Coach is designed to reduce the amount of prompting the learner must do. When she sends a bare link, screenshot, score, calculation, single topic, “done,” short fragment, unexplained output, or other study-related item with little context, it should:
+
+1. inspect the visible context;
+2. explain what it appears to mean without pretending uncertain inferences are facts;
+3. perform one immediately useful, low-risk step;
+4. recommend the next action;
+5. ask at most one targeted question with concrete choices.
+
+It does not perform external writes, submissions, messages, or other consequential actions without the authority those actions normally require.
 
 ## Upload-and-go behavior
 
@@ -30,6 +42,19 @@ codex plugin add kimbi-coach@kimbi-coach
 ```
 
 Then restart the client and test in a completely new chat. The attachment-only fix is included in v0.3.0 and later.
+
+## Automatic daily updates
+
+Local Codex and ChatGPT desktop installations include a bundled `SessionStart` hook. After the learner reviews and trusts it once, the hook:
+
+- checks the `kimbi-coach` marketplace at most once every 24 hours;
+- refreshes the marketplace and reinstalls the latest Kimbi Coach package;
+- stores only update timestamps and compact command results in the plugin's writable data directory;
+- retries a failed check after six hours without blocking study features.
+
+An update found at session start applies to a **new chat** and may require restarting the client. The hook does not run on ChatGPT web or mobile because web installation does not deploy local scripts. Those surfaces receive updates through the Plugins Directory after a new package version is reviewed and published.
+
+Bundled hooks are intentionally not trusted automatically by Codex. During setup, review and trust `hooks/hooks.json` and `hooks/check_updates.py` if automatic local updates are desired. If hooks are unavailable but scheduled automations are supported, Kimbi Coach offers to configure a daily update check after receiving permission.
 
 ## Give this link to ChatGPT or Codex
 
@@ -101,6 +126,35 @@ Kimbi Coach/
 
 The profile contains learning preferences and course context—not credentials, student numbers, or confidential client data.
 
+## Study plans, guides, and online research
+
+Kimbi Coach can turn a syllabus, exam date, topic list, notes, or weak-area evidence into:
+
+- dated study plans with recovery rules;
+- concise topic guides and prerequisite maps;
+- formula, authority, and misconception checklists;
+- retrieval practice and retest schedules;
+- a small, level-appropriate resource stack;
+- current online research using authoritative and first-party sources.
+
+It should explain why each recommended resource was selected, distinguish free from paid material, and never pretend to have reviewed a page that it did not open.
+
+## Accounting career coaching
+
+Kimbi Coach can compare accounting career paths, research current qualifications and opportunities, identify skill gaps, suggest portfolio projects, prepare internship or job-search strategies, and build semester or 90-day career plans. Time-sensitive claims—especially Philippine licensure requirements, deadlines, job openings, and salary evidence—must be checked against current authoritative or first-party sources.
+
+## Exam-answer trust gate
+
+Before Kimbi Coach calls an exam answer correct, verified, reliable, or trustworthy, it must:
+
+1. identify the source of material facts and rules;
+2. separate question facts, course sources, external authority, calculations, and assumptions;
+3. recompute or re-reason the answer independently;
+4. try to falsify it through an adversarial review;
+5. disclose limitations and label it `Verified`, `Reasoned but not externally verified`, or `Uncertain`.
+
+Current tax, law, regulation, and accounting-standard claims cannot receive the `Verified` label until jurisdiction, effective period, and appropriate authority have been checked. Potential live or restricted assessments receive concept-level or analogous help until permitted-assistance rules are clear.
+
 ## Availability across her ecosystem
 
 A GitHub marketplace installation is available to supported local clients on the computer where it is installed. It does **not** automatically install the plugin in every ChatGPT web, mobile, or organization workspace.
@@ -128,5 +182,6 @@ Download the latest tested archive from [GitHub Releases](https://github.com/elr
 - [Plugin installation details](plugins/kimbi-coach/INSTALL.md)
 - [Plugin capabilities](plugins/kimbi-coach/README.md)
 - [Marketplace manifest](.agents/plugins/marketplace.json)
+- [`hooks/check_updates.py`](plugins/kimbi-coach/hooks/check_updates.py) — rate-limited local updater
 
 Kimbi Coach is currently skills-only. It has no remote server, credentials, or independent student-data store. Cloud files are handled only through apps or folders the learner connects and authorizes.

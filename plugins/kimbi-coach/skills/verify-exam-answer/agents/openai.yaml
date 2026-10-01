@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify an Exam Answer"
+  short_description: "Source, recompute, and challenge exam answers"
+  default_prompt: "Use $verify-exam-answer to verify this exam answer before I rely on it."

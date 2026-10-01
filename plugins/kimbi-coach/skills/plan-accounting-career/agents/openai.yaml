@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan an Accounting Career"
+  short_description: "Current pathways, skills, and career action plans"
+  default_prompt: "Use $plan-accounting-career to build an evidence-based accounting career plan."

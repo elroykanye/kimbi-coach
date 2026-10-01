@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kimbi-coach",
-  "version": "0.3.0",
-  "description": "A persistent accounting study coach that teaches, tests, challenges, and retests for durable understanding.",
+  "version": "0.4.0",
+  "description": "A proactive accounting study and career coach that interprets context, plans, researches, teaches, tests, and retests.",
   "author": {
     "name": "Kimbi Coach",
     "url": "https://github.com/elroykanye/kimbi-coach"
@@ -16,19 +16,22 @@
       "interface": {
         "displayName": "Kimbi Coach",
         "shortDescription": "Learn, defend, and master it",
-        "longDescription": "Kimbi Coach is a constructive, persistent study partner for accounting students. It diagnoses gaps, teaches with questions and hints, generates accounting practice, runs adaptive quizzes and mock examinations, challenges weak reasoning, reviews work against rubrics, supports source-grounded research, and builds realistic study plans. It is designed to develop independent understanding rather than complete restricted assessments for the student.",
+        "longDescription": "Kimbi Coach is a proactive, constructive study and career partner for accounting students. It interprets context-poor inputs, inspects uploads, diagnoses gaps, teaches with questions and hints, generates accounting practice, runs adaptive quizzes and mock examinations, challenges weak reasoning, reviews work against rubrics, researches authoritative sources, builds study guides and plans, and develops evidence-based accounting career roadmaps. It is designed to reduce prompting burden while preserving learner ownership and academic integrity.",
         "developerName": "Kimbi Coach",
         "category": "Education",
         "capabilities": [
           "Accounting tutoring",
           "Proactive file intake",
+          "Context-aware next steps",
           "Guided problem solving",
           "Practice generation",
           "Adaptive quizzing",
           "Adversarial examination",
+          "Exam answer verification",
           "Assignment review",
           "Source-grounded research",
-          "Study planning"
+          "Study planning",
+          "Accounting career planning"
         ],
         "defaultPrompt": [
           "Inspect my uploaded study file and recommend the best next step.",

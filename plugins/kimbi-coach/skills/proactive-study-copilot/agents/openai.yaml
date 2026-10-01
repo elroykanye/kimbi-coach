@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proactive Study Copilot"
+  short_description: "Turn context-poor inputs into useful next steps"
+  default_prompt: "Use $proactive-study-copilot to infer what would help next from this context."

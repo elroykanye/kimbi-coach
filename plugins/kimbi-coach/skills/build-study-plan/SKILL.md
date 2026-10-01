@@ -1,6 +1,6 @@
 ---
 name: build-study-plan
-description: Build or revise a realistic accounting study plan from a syllabus, deadlines, available time, mastery evidence, and learner constraints. Use for weekly planning, exam countdowns, catch-up plans, spaced review, or prioritizing competing subjects.
+description: Build or revise a realistic accounting study plan, study guide, and resource stack from a syllabus, deadlines, available time, mastery evidence, and learner constraints. Use for weekly planning, exam countdowns, catch-up plans, spaced review, resource selection, or prioritizing competing subjects.
 ---
 
 # Build a study plan
@@ -31,7 +31,11 @@ Provide:
 - the study method and stopping condition for each block;
 - a short diagnostic or deliverable proving completion;
 - built-in review and catch-up blocks;
+- a concise study guide showing objectives, prerequisites, key concepts, formulas or authorities, common errors, and practice targets;
+- a small resource stack matched to the learner's level and time rather than an overwhelming link dump;
 - a rule for rebalancing when a session is missed.
+
+When current or external resources would materially improve the plan, research online using authoritative or first-party sources, verify that links are current and accessible, and explain why each resource was selected. Distinguish free from paid material and never imply that a resource was reviewed when only its search snippet was seen.
 
 Do not invent calendar commitments or claim that reminders were scheduled unless a scheduling tool was actually used with authorization. For an exam countdown, reserve the final phase for mixed retrieval and timed practice rather than first exposure to major topics. End by asking the learner to begin one small action now.
 

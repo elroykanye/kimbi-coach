@@ -39,3 +39,9 @@ Do not place passwords, access tokens, student identification numbers, private g
 After writing, read back `KIMBI_PROFILE.md` and one created index file to confirm that the destination is writable. If the destination is a synced local folder, ask the learner to verify the sync status rather than claiming backup succeeded. Summarize where future Kimbi Coach files should be stored.
 
 If a profile already exists, read it, confirm it belongs to the learner, preserve unknown fields, and update only what she requests.
+
+## Enable updates
+
+Explain that local Codex installations include a SessionStart hook that checks the `kimbi-coach` marketplace at most once per 24 hours. The learner must review and trust the bundled hook once; do not claim it is active until the host shows it as trusted. A newly installed version becomes available in a new chat and may require restarting the client.
+
+If hooks are unavailable but the environment supports scheduled automations, offer to create a daily Kimbi Coach update check. Obtain confirmation before creating the automation in the learner's account. Web and mobile installations rely on published Plugins Directory updates rather than the local hook.

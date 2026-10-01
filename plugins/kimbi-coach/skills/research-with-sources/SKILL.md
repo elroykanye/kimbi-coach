@@ -29,3 +29,5 @@ When web or connected-source tools are available:
 Look for contrary authority, scope limitations, exceptions, and facts that would change the conclusion. State uncertainty and unresolved conflicts plainly. Never fabricate a quotation, page number, DOI, standard paragraph, or URL.
 
 Deliver an evidence map or annotated bibliography before drafting a major paper when that would prevent unsupported writing. Finish with a citation audit and follow [coach principles](../../references/coach-principles.md) for current rules and academic integrity.
+
+If the learner gives only a topic or source link, proactively propose a research question, a short search plan, and the first authoritative sources to investigate instead of asking her to design the workflow.
