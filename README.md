@@ -90,11 +90,11 @@ If that environment cannot install GitHub marketplace plugins, it should explain
 Developers who already have Codex CLI may run these commands on each computer:
 
 ```bash
-codex plugin marketplace add elroykanye/kimbi-coach
+codex plugin marketplace add https://github.com/elroykanye/kimbi-coach.git
 codex plugin add kimbi-coach@kimbi-coach
 ```
 
-This is a user-level local installation. It is not limited to one source-code project. If PowerShell says `codex` is not recognized, use the Windows ZIP installer above instead.
+This is a user-level local installation. It is not limited to one source-code project. Use the full HTTPS URL shown above: GitHub shorthand may be interpreted as SSH and fail with `Permission denied (publickey)` on a machine without a GitHub SSH key. If PowerShell says `codex` is not recognized, use the Windows ZIP installer above instead.
 
 ### 2. Restart and open a new chat
 

@@ -26,13 +26,15 @@ The agent should report any unsupported surface or missing permission rather tha
 ## Install from GitHub with Codex CLI — optional
 
 ```bash
-codex plugin marketplace add elroykanye/kimbi-coach
+codex plugin marketplace add https://github.com/elroykanye/kimbi-coach.git
 codex plugin add kimbi-coach@kimbi-coach
 ```
 
 Restart the ChatGPT desktop app or Codex client and begin a new chat. This installs Kimbi Coach at the local user level; it is not tied to a particular source-code repository.
 
 If PowerShell reports that `codex` is not recognized as a cmdlet, do not keep retrying the command. Use the Windows learner setup above. Installing Codex CLI separately is not required for Kimbi Coach.
+
+Use the complete HTTPS URL exactly as shown. GitHub shorthand can be interpreted as an SSH clone and fail with `Permission denied (publickey)` when no GitHub SSH key is configured.
 
 If it was previously installed, refresh it with:
 
